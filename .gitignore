@@ -1,0 +1,24 @@
+node_modules
+dist
+.DS_Store
+*.local
+.claude
+# Local reference backups - never publish
+reference-assets-backup/
+
+sushmita-the-series.zip
+pic.png
+pic1.jpeg
+
+
+sushmita-the-series.zip
+pic.png
+pic1.jpeg
+
+
+# Exclude reference portfolio assets
+public/assets/Sushmita_Dasari_Resume.pdf
+public/assets/og-image.jpg
+public/assets/portrait-1100.webp
+public/assets/portrait-420.webp
+public/assets/portrait-720.webp

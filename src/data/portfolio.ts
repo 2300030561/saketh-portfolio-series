@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Central portfolio data â€” generated from Saketh's portfolio series.
  * Every fact on the site comes from this file. Update it here and the whole site follows.
  * Nothing here should be added unless it appears on the resume.
@@ -87,30 +87,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'securecorp-assessment',
-    title: 'SecureCorp Security Assessment',
+    id: 'network-penetration-testing-lab',
+    title: 'Network Penetration Testing Lab',
     year: '2026',
-    genre: 'Cybersecurity • Red Team • Blue Team',
-    logline: 'A hands-on security assessment capstone exploring network and web application attack surfaces, with evidence documented for security investigation.',
-    stack: ['Linux', 'Nmap', 'DVWA', 'Wazuh', 'GitHub'],
+    genre: 'Cybersecurity • Network Security • Blue Team',
+    logline: 'An isolated, authorized cybersecurity lab for network reconnaissance, service identification, web security review, and evidence-based documentation.',
+    stack: ['Kali Linux', 'Nmap', 'Metasploitable2', 'DVWA', 'GitHub'],
     build: [
       'Performed network discovery and service assessment in a controlled lab environment.',
-      'Practiced web application security testing against DVWA and documented assessment evidence.',
+      'Reviewed DVWA and WebDAV behavior in the lab and documented observations without destructive changes.',
       'Organized findings and supporting evidence in a GitHub project repository.',
     ],
     features: [
       'Network and service discovery',
       'DVWA web application security testing',
-      'SQL injection and cross-site scripting assessment',
+      'HTTP and WebDAV security observations',
       'FTP and SSH assessment evidence',
       'GitHub-based evidence documentation',
     ],
     metrics: [
       { value: 'Red Team', label: 'security assessment' },
-      { value: 'Blue Team', label: 'detection and investigation learning' },
-      { value: 'Week 2', label: 'assessment evidence documented' },
+      { value: 'Blue Team', label: 'security monitoring learning' },
+      { value: 'Isolated Lab', label: 'authorized testing environment' },
     ],
-    github: 'https://github.com/2300030561/securecorp-security-assessment',
+    github: 'https://github.com/2300030561/Network-Penetration-Testing-Lab',
     palette: { from: '#071b16', via: '#075e54', to: '#050b10', accent: '#42e8b4' },
     motif: 'shield',
   },
@@ -151,22 +151,22 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    id: 'securecorp-project',
-    title: 'Security Assessment Capstone',
-    org: 'SecureCorp',
-    detail: 'Hands-on cybersecurity capstone covering network discovery, web application security testing, and documented assessment evidence.',
+    id: 'network-penetration-testing-lab-project',
+    title: 'Network Penetration Testing Lab',
+    org: 'Academic Cybersecurity Lab',
+    detail: 'Hands-on cybersecurity lab covering network discovery, service identification, WebDAV/DVWA review, and documented evidence.',
     laurel: 'Cybersecurity Project',
-    link: 'https://github.com/2300030561/securecorp-security-assessment',
+    link: 'https://github.com/2300030561/Network-Penetration-Testing-Lab',
   },
 ];
 
-export type Certification = { issuer: string; name: string; link: string };
+export type Certification = { issuer: string; name: string; link: string; badge?: string };
 
 export const certifications: Certification[] = [
-  { issuer: 'Microsoft', name: 'Azure Fundamentals (AZ-900)', link: '' },
-  { issuer: 'NPTEL', name: 'Data Structures Using Java', link: '' },
-  { issuer: 'Automation Anywhere', name: 'Certified RPA', link: '' },
-  { issuer: 'Cisco', name: 'Introduction to Cybersecurity', link: '' },
+  { issuer: 'Microsoft', name: 'Azure Fundamentals (AZ-900)', link: '/assets/microsoft-azure-fundamentals-badge.png', badge: '/assets/microsoft-azure-fundamentals-badge.png' },
+  { issuer: 'NPTEL', name: 'Data Base Management System (DBMS)', link: '/assets/nptel-dbms-certificate.pdf' },
+  { issuer: 'Automation Anywhere', name: 'Certified RPA', link: '/assets/automation-anywhere-rpa-certificate.pdf' },
+  { issuer: 'Cisco', name: 'Introduction to Cybersecurity', link: '/assets/cisco-introduction-to-cybersecurity-certificate.jpg', badge: '/assets/cisco-cybersecurity-badge.png' },
 ];
 export type Skill = { name: string; mono: string; note?: string };
 export type SkillCategory = { id: string; title: string; subtitle: string; skills: Skill[] };
@@ -223,20 +223,20 @@ export const skillCategories: SkillCategory[] = [
 
 export const skillEvidence: Record<string, string[]> = {
   Python: ['Password Security Analyzer'],
-  Java: ['Data Structures Using Java'],
-  'SOC Analysis': ['SecureCorp Security Assessment'],
-  'Log Analysis': ['SecureCorp Security Assessment'],
-  'Threat Detection': ['SecureCorp Security Assessment'],
-  'Vulnerability Assessment': ['SecureCorp Security Assessment'],
-  'Web Application Security': ['SecureCorp Security Assessment'],
-  Nmap: ['SecureCorp Security Assessment'],
-  Linux: ['SecureCorp Security Assessment'],
-  Wazuh: ['SecureCorp Security Assessment'],
+  Java: [],
+  'SOC Analysis': ['Network Penetration Testing Lab'],
+  'Log Analysis': ['Network Penetration Testing Lab'],
+  'Threat Detection': ['Network Penetration Testing Lab'],
+  'Vulnerability Assessment': ['Network Penetration Testing Lab'],
+  'Web Application Security': ['Network Penetration Testing Lab'],
+  Nmap: ['Network Penetration Testing Lab'],
+  Linux: ['Network Penetration Testing Lab'],
+  Wazuh: ['Network Penetration Testing Lab'],
   React: ['Netflix-style portfolio project'],
   HTML: ['Netflix-style portfolio project'],
   CSS: ['Netflix-style portfolio project'],
-  'Git / GitHub': ['SecureCorp Security Assessment', 'Password Security Analyzer'],
-  DVWA: ['SecureCorp Security Assessment'],
+  'Git / GitHub': ['Network Penetration Testing Lab', 'Password Security Analyzer'],
+  DVWA: ['Network Penetration Testing Lab'],
   TryHackMe: ['Cybersecurity learning'],
 };
 export type Episode = {
@@ -307,22 +307,22 @@ export const seasons: Season[] = [
     number: 3,
     title: 'Into Cybersecurity',
     period: '2026',
-    synopsis: 'Hands-on security assessment work in a controlled lab environment.',
+    synopsis: 'Hands-on network and web security review in an isolated lab environment.',
     episodes: [
       {
         code: 'S03 E01',
         title: 'Network Discovery',
-        description: 'Practised network discovery and service identification as part of the SecureCorp academic capstone.',
+        description: 'Practised network discovery and service identification as part of the Network Penetration Testing Lab project.',
         tags: ['Linux', 'Nmap', 'Networking'],
-        runtime: 'SecureCorp Capstone',
+        runtime: 'Network Penetration Testing Lab',
         palette: jade,
       },
       {
         code: 'S03 E02',
         title: 'Web Security Testing',
-        description: 'Worked with DVWA in a lab environment and documented SQL injection and XSS assessment evidence.',
+        description: 'Reviewed DVWA and WebDAV behavior in a lab environment and documented security observations.',
         tags: ['DVWA', 'SQL Injection', 'XSS'],
-        runtime: 'SecureCorp Capstone',
+        runtime: 'Network Penetration Testing Lab',
         palette: crimson,
       },
       {
@@ -379,13 +379,13 @@ export const seasons: Season[] = [
 export type TopPick = { label: string; title: string; detail: string; palette: Palette };
 
 export const topPicks: TopPick[] = [
-  { label: 'Cybersecurity Project', title: 'SecureCorp Assessment', detail: 'Network discovery and web security testing', palette: jade },
+  { label: 'Cybersecurity Project', title: 'Network Penetration Testing Lab', detail: 'Network discovery and web security review', palette: jade },
   { label: 'Python Project', title: 'Password Security Analyzer', detail: 'Password security analysis', palette: violet },
   { label: 'Programming', title: 'Python • Java • C', detail: 'Programming and problem solving', palette: amber },
   { label: 'Security Skills', title: 'SOC & Log Analysis', detail: 'Learning security monitoring and investigation', palette: ocean },
   { label: 'Web Development', title: 'Portfolio: The Series', detail: 'React • TypeScript • CSS', palette: crimson },
   { label: 'Microsoft Certification', title: 'Azure Fundamentals', detail: 'AZ-900', palette: ocean },
-  { label: 'NPTEL Certification', title: 'Data Structures Using Java', detail: 'NPTEL', palette: violet },
+  { label: 'NPTEL Certification', title: 'Data Base Management System (DBMS)', detail: 'NPTEL', palette: violet },
   { label: 'Automation Anywhere', title: 'Certified RPA', detail: 'Robotic Process Automation', palette: amber },
   { label: 'Cisco Certification', title: 'Introduction to Cybersecurity', detail: 'Cisco Networking Academy', palette: jade },
   { label: 'Current Focus', title: 'Keep Learning', detail: 'Cybersecurity • Programming • Web Development', palette: crimson },
@@ -415,12 +415,12 @@ export const introSlides: IntroSlide[] = [
   {
     kicker: 'Projects',
     title: 'Hands-on Projects',
-    lines: ['SecureCorp Security Assessment - academic capstone', 'Password Security Analyzer - Python project', 'Portfolio: The Series - web development project'],
+    lines: ['Network Penetration Testing Lab - academic capstone', 'Password Security Analyzer - Python project', 'Portfolio: The Series - web development project'],
   },
   {
     kicker: 'Certifications',
     title: 'Learning Milestones',
-    lines: ['Microsoft Azure Fundamentals (AZ-900)', 'NPTEL Data Structures Using Java', 'Automation Anywhere Certified RPA', 'Cisco Introduction to Cybersecurity'],
+    lines: ['Microsoft Azure Fundamentals (AZ-900)', 'NPTEL Data Base Management System (DBMS)', 'Automation Anywhere Certified RPA', 'Cisco Introduction to Cybersecurity'],
   },
   {
     kicker: 'Current Mission',
@@ -477,13 +477,3 @@ export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: s
   moments: { nav: 'Moments', card: 'My Achievements', meta: `${achievements.length} Moments â€¢ ${certifications.length} Certifications`, palette: crimson },
   story: { nav: 'Resume', card: 'The Full Story', meta: 'Resume â€¢ View & download', palette: violet },
 };
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,3 @@
-```typescript
 /**
  * Central portfolio data — generated from Saketh's portfolio series.
  * Every fact on the site comes from this file. Update it here and the whole site follows.
@@ -795,4 +794,3 @@ export const sectionMeta: Record<
     palette: violet,
   },
 };
-```

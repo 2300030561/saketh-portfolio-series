@@ -1,5 +1,5 @@
 /**
- * Central portfolio data â€” generated from Saketh's portfolio series.
+ * Central portfolio data — generated from Saketh's portfolio series.
  * Every fact on the site comes from this file. Update it here and the whole site follows.
  * Nothing here should be added unless it appears on the resume.
  */
@@ -67,6 +67,7 @@ export const experience = [
     ],
   },
 ];
+
 export type Metric = { value: string; label: string };
 
 export type Project = {
@@ -79,7 +80,9 @@ export type Project = {
   build: string[];
   features: string[];
   metrics: Metric[];
-  /** Omit when the repository isn't public â€” the GitHub button is hidden instead of linking to a 404. */
+  /**
+   * Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404.
+   */
   github?: string;
   palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
@@ -168,6 +171,7 @@ export const projects: Project[] = [
     motif: 'flow',
   },
 ];
+
 export type Achievement = {
   id: string;
   title: string;
@@ -188,16 +192,50 @@ export const achievements: Achievement[] = [
   },
 ];
 
-export type Certification = { issuer: string; name: string; link: string; badge?: string };
+export type Certification = {
+  issuer: string;
+  name: string;
+  link: string;
+  badge?: string;
+};
 
 export const certifications: Certification[] = [
-  { issuer: 'Microsoft', name: 'Azure Fundamentals (AZ-900)', link: '/assets/microsoft-azure-fundamentals-badge.png', badge: '/assets/microsoft-azure-fundamentals-badge.png' },
-  { issuer: 'NPTEL', name: 'Data Base Management System (DBMS)', link: '/assets/nptel-dbms-certificate.pdf' },
-  { issuer: 'Automation Anywhere', name: 'Certified RPA', link: '/assets/automation-anywhere-rpa-certificate.pdf' },
-  { issuer: 'Cisco', name: 'Introduction to Cybersecurity', link: '/assets/cisco-introduction-to-cybersecurity-certificate.jpg', badge: '/assets/cisco-cybersecurity-badge.png' },
+  {
+    issuer: 'Microsoft',
+    name: 'Azure Fundamentals (AZ-900)',
+    link: '/assets/microsoft-azure-fundamentals-badge.png',
+    badge: '/assets/microsoft-azure-fundamentals-badge.png',
+  },
+  {
+    issuer: 'NPTEL',
+    name: 'Data Base Management System (DBMS)',
+    link: '/assets/nptel-dbms-certificate.pdf',
+  },
+  {
+    issuer: 'Automation Anywhere',
+    name: 'Certified RPA',
+    link: '/assets/automation-anywhere-rpa-certificate.pdf',
+  },
+  {
+    issuer: 'Cisco',
+    name: 'Introduction to Cybersecurity',
+    link: '/assets/cisco-introduction-to-cybersecurity-certificate.jpg',
+    badge: '/assets/cisco-cybersecurity-badge.png',
+  },
+  {
+    issuer: 'Aenexz Tech Private Limited',
+    name: 'Cyber Security Internship',
+    link: '/assets/Aenexz-Cyber-Security-Internship.pdf',
+  },
 ];
+
 export type Skill = { name: string; mono: string; note?: string };
-export type SkillCategory = { id: string; title: string; subtitle: string; skills: Skill[] };
+export type SkillCategory = {
+  id: string;
+  title: string;
+  subtitle: string;
+  skills: Skill[];
+};
 
 export const skillCategories: SkillCategory[] = [
   {
@@ -267,6 +305,7 @@ export const skillEvidence: Record<string, string[]> = {
   DVWA: ['Network Penetration Testing Lab'],
   TryHackMe: ['Cybersecurity learning'],
 };
+
 export type Episode = {
   code: string;
   title: string;
@@ -284,11 +323,40 @@ export type Season = {
   episodes: Episode[];
 };
 
-const crimson: Palette = { from: '#24060b', via: '#6e0d1d', to: '#09070a', accent: '#ff3d5a' };
-const amber: Palette = { from: '#1c1003', via: '#6b3c06', to: '#0a0806', accent: '#ffb547' };
-const ocean: Palette = { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' };
-const violet: Palette = { from: '#120822', via: '#3d1a6e', to: '#07060c', accent: '#b98bff' };
-const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: '#46e3a8' };
+const crimson: Palette = {
+  from: '#24060b',
+  via: '#6e0d1d',
+  to: '#09070a',
+  accent: '#ff3d5a',
+};
+
+const amber: Palette = {
+  from: '#1c1003',
+  via: '#6b3c06',
+  to: '#0a0806',
+  accent: '#ffb547',
+};
+
+const ocean: Palette = {
+  from: '#04121f',
+  via: '#0f4c6e',
+  to: '#05080d',
+  accent: '#4cc9ff',
+};
+
+const violet: Palette = {
+  from: '#120822',
+  via: '#3d1a6e',
+  to: '#07060c',
+  accent: '#b98bff',
+};
+
+const jade: Palette = {
+  from: '#03150f',
+  via: '#0d5a40',
+  to: '#050a08',
+  accent: '#46e3a8',
+};
 
 export const seasons: Season[] = [
   {
@@ -404,22 +472,84 @@ export const seasons: Season[] = [
     ],
   },
 ];
-export type TopPick = { label: string; title: string; detail: string; palette: Palette };
+
+export type TopPick = {
+  label: string;
+  title: string;
+  detail: string;
+  palette: Palette;
+};
 
 export const topPicks: TopPick[] = [
-  { label: 'Cybersecurity Project', title: 'Network Penetration Testing Lab', detail: 'Network discovery and web security review', palette: jade },
-  { label: 'Python Project', title: 'Password Security Analyzer', detail: 'Password security analysis', palette: violet },
-  { label: 'Programming', title: 'Python • Java • C', detail: 'Programming and problem solving', palette: amber },
-  { label: 'Security Skills', title: 'SOC & Log Analysis', detail: 'Learning security monitoring and investigation', palette: ocean },
-  { label: 'Web Development', title: 'Portfolio: The Series', detail: 'React • TypeScript • CSS', palette: crimson },
-  { label: 'Microsoft Certification', title: 'Azure Fundamentals', detail: 'AZ-900', palette: ocean },
-  { label: 'NPTEL Certification', title: 'Data Base Management System (DBMS)', detail: 'NPTEL', palette: violet },
-  { label: 'Automation Anywhere', title: 'Certified RPA', detail: 'Robotic Process Automation', palette: amber },
-  { label: 'Cisco Certification', title: 'Introduction to Cybersecurity', detail: 'Cisco Networking Academy', palette: jade },
-  { label: 'Current Focus', title: 'Keep Learning', detail: 'Cybersecurity • Programming • Web Development', palette: crimson },
+  {
+    label: 'Cybersecurity Project',
+    title: 'Network Penetration Testing Lab',
+    detail: 'Network discovery and web security review',
+    palette: jade,
+  },
+  {
+    label: 'Python Project',
+    title: 'Password Security Analyzer',
+    detail: 'Password security analysis',
+    palette: violet,
+  },
+  {
+    label: 'Programming',
+    title: 'Python • Java • C',
+    detail: 'Programming and problem solving',
+    palette: amber,
+  },
+  {
+    label: 'Security Skills',
+    title: 'SOC & Log Analysis',
+    detail: 'Learning security monitoring and investigation',
+    palette: ocean,
+  },
+  {
+    label: 'Web Development',
+    title: 'Portfolio: The Series',
+    detail: 'React • TypeScript • CSS',
+    palette: crimson,
+  },
+  {
+    label: 'Microsoft Certification',
+    title: 'Azure Fundamentals',
+    detail: 'AZ-900',
+    palette: ocean,
+  },
+  {
+    label: 'NPTEL Certification',
+    title: 'Data Base Management System (DBMS)',
+    detail: 'NPTEL',
+    palette: violet,
+  },
+  {
+    label: 'Automation Anywhere',
+    title: 'Certified RPA',
+    detail: 'Robotic Process Automation',
+    palette: amber,
+  },
+  {
+    label: 'Cisco Certification',
+    title: 'Introduction to Cybersecurity',
+    detail: 'Cisco Networking Academy',
+    palette: jade,
+  },
+  {
+    label: 'Current Focus',
+    title: 'Keep Learning',
+    detail: 'Cybersecurity • Programming • Web Development',
+    palette: crimson,
+  },
 ];
-/** Slides for the "â–¶ Play Intro" cinematic sequence. */
-export type IntroSlide = { kicker: string; title: string; lines: string[]; chips?: string[] };
+
+/** Slides for the "▶ Play Intro" cinematic sequence. */
+export type IntroSlide = {
+  kicker: string;
+  title: string;
+  lines: string[];
+  chips?: string[];
+};
 
 export const introSlides: IntroSlide[] = [
   {
@@ -437,18 +567,31 @@ export const introSlides: IntroSlide[] = [
   {
     kicker: 'Cybersecurity',
     title: 'The Security Journey',
-    lines: ['Learning SOC analysis, log analysis and threat detection', 'Practising network discovery and web security testing in a lab'],
+    lines: [
+      'Learning SOC analysis, log analysis and threat detection',
+      'Practising network discovery and web security testing in a lab',
+    ],
     chips: ['Linux', 'Nmap', 'DVWA', 'Wazuh'],
   },
   {
     kicker: 'Projects',
     title: 'Hands-on Projects',
-    lines: ['Network Penetration Testing Lab - academic capstone', 'Password Security Analyzer - Python project', 'Portfolio: The Series - web development project'],
+    lines: [
+      'Network Penetration Testing Lab - academic capstone',
+      'Password Security Analyzer - Python project',
+      'Portfolio: The Series - web development project',
+    ],
   },
   {
     kicker: 'Certifications',
     title: 'Learning Milestones',
-    lines: ['Microsoft Azure Fundamentals (AZ-900)', 'NPTEL Data Base Management System (DBMS)', 'Automation Anywhere Certified RPA', 'Cisco Introduction to Cybersecurity'],
+    lines: [
+      'Microsoft Azure Fundamentals (AZ-900)',
+      'NPTEL Data Base Management System (DBMS)',
+      'Automation Anywhere Certified RPA',
+      'Cisco Introduction to Cybersecurity',
+      'Aenexz Tech Private Limited - Cyber Security Internship (2026)',
+    ],
   },
   {
     kicker: 'Current Mission',
@@ -456,8 +599,17 @@ export const introSlides: IntroSlide[] = [
     lines: ['Cybersecurity · Programming · Web Development'],
   },
 ];
+
 export type ProfileId = 'saketh' | 'recruiter' | 'developer' | 'creative';
-export type SectionId = 'about' | 'journey' | 'originals' | 'picks' | 'skills' | 'moments' | 'story';
+
+export type SectionId =
+  | 'about'
+  | 'journey'
+  | 'originals'
+  | 'picks'
+  | 'skills'
+  | 'moments'
+  | 'story';
 
 export const viewerProfiles: {
   id: ProfileId;
@@ -496,12 +648,50 @@ export const viewerProfiles: {
   },
 ];
 
-export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: string; palette: Palette }> = {
-  about: { nav: 'About', card: 'About Me', meta: 'The Pilot â€¢ Education & training', palette: violet },
-  journey: { nav: 'Journey', card: 'My Journey', meta: `${seasons.length} Seasons â€¢ ${seasons.reduce((n, s) => n + s.episodes.length, 0)} Episodes`, palette: amber },
-  originals: { nav: 'Originals', card: 'My Projects', meta: `${projects.length} Originals â€¢ 2026`, palette: crimson },
-  picks: { nav: 'Top Picks', card: 'Top Picks', meta: 'Top 10 from the resume', palette: jade },
-  skills: { nav: 'Skills', card: 'My Skills', meta: `${skillCategories.length} Categories`, palette: ocean },
-  moments: { nav: 'Moments', card: 'My Achievements', meta: `${achievements.length} Moments â€¢ ${certifications.length} Certifications`, palette: crimson },
-  story: { nav: 'Resume', card: 'The Full Story', meta: 'Resume â€¢ View & download', palette: violet },
+export const sectionMeta: Record<
+  SectionId,
+  { nav: string; card: string; meta: string; palette: Palette }
+> = {
+  about: {
+    nav: 'About',
+    card: 'About Me',
+    meta: 'The Pilot • Education & training',
+    palette: violet,
+  },
+  journey: {
+    nav: 'Journey',
+    card: 'My Journey',
+    meta: `${seasons.length} Seasons • ${seasons.reduce((n, s) => n + s.episodes.length, 0)} Episodes`,
+    palette: amber,
+  },
+  originals: {
+    nav: 'Originals',
+    card: 'My Projects',
+    meta: `${projects.length} Originals • 2026`,
+    palette: crimson,
+  },
+  picks: {
+    nav: 'Top Picks',
+    card: 'Top Picks',
+    meta: 'Top 10 from the resume',
+    palette: jade,
+  },
+  skills: {
+    nav: 'Skills',
+    card: 'My Skills',
+    meta: `${skillCategories.length} Categories`,
+    palette: ocean,
+  },
+  moments: {
+    nav: 'Moments',
+    card: 'My Achievements',
+    meta: `${achievements.length} Moments • ${certifications.length} Certifications`,
+    palette: crimson,
+  },
+  story: {
+    nav: 'Resume',
+    card: 'The Full Story',
+    meta: 'Resume • View & download',
+    palette: violet,
+  },
 };

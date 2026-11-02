@@ -1,3 +1,4 @@
+```typescript
 /**
  * Central portfolio data — generated from Saketh's portfolio series.
  * Every fact on the site comes from this file. Update it here and the whole site follows.
@@ -80,9 +81,7 @@ export type Project = {
   build: string[];
   features: string[];
   metrics: Metric[];
-  /**
-   * Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404.
-   */
+  /** Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404. */
   github?: string;
   palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
@@ -226,6 +225,11 @@ export const certifications: Certification[] = [
     issuer: 'Aenexz Tech Private Limited',
     name: 'Cyber Security Internship',
     link: '/assets/Aenexz-Cyber-Security-Internship.pdf',
+  },
+  {
+    issuer: 'Aenexz Tech Private Limited',
+    name: 'Cyber Security Training Completion',
+    link: '/assets/Aenexz-Cyber-Security-Training-Completion.pdf',
   },
 ];
 
@@ -591,6 +595,7 @@ export const introSlides: IntroSlide[] = [
       'Automation Anywhere Certified RPA',
       'Cisco Introduction to Cybersecurity',
       'Aenexz Tech Private Limited - Cyber Security Internship (2026)',
+      'Aenexz Tech Private Limited - Cyber Security Training Completion (2026)',
     ],
   },
   {
@@ -695,3 +700,4 @@ export const sectionMeta: Record<
     palette: violet,
   },
 };
+```

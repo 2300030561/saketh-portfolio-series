@@ -5,7 +5,12 @@
  * Nothing here should be added unless it appears on the resume.
  */
 
-export type Palette = { from: string; via: string; to: string; accent: string };
+export type Palette = {
+  from: string;
+  via: string;
+  to: string;
+  accent: string;
+};
 
 export const profile = {
   fullName: 'Pulugutha Saketh',
@@ -15,7 +20,8 @@ export const profile = {
   originalLabel: 'A SAKETH ORIGINAL',
   role: 'Cybersecurity & Web Development',
   tagline: ['Cybersecurity', 'SOC Analysis', 'Web Development'],
-  intro: 'B.Tech Computer Science and Engineering student at KL University, interested in cybersecurity, SOC analysis, ethical hacking and web development. Building practical projects to strengthen security assessment, log analysis and programming skills.',
+  intro:
+    'B.Tech Computer Science and Engineering student at KL University, interested in cybersecurity, SOC analysis, ethical hacking and web development. Building practical projects to strengthen security assessment, log analysis and programming skills.',
   location: 'Vijayawada, Andhra Pradesh',
   email: 'p97301056@gmail.com',
   links: {
@@ -28,7 +34,12 @@ export const profile = {
     srcSet: '/assets/profile.jpg 420w',
     alt: 'Portrait of Saketh',
   },
-  interests: ['Cybersecurity', 'SOC Analysis', 'Ethical Hacking', 'Web Development'],
+  interests: [
+    'Cybersecurity',
+    'SOC Analysis',
+    'Ethical Hacking',
+    'Web Development',
+  ],
 };
 
 export const education = [
@@ -69,7 +80,10 @@ export const experience = [
   },
 ];
 
-export type Metric = { value: string; label: string };
+export type Metric = {
+  value: string;
+  label: string;
+};
 
 export type Project = {
   id: string;
@@ -81,7 +95,6 @@ export type Project = {
   build: string[];
   features: string[];
   metrics: Metric[];
-  /** Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404. */
   github?: string;
   palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
@@ -93,7 +106,8 @@ export const projects: Project[] = [
     title: 'Network Penetration Testing Lab',
     year: '2026',
     genre: 'Cybersecurity • Network Security • Blue Team',
-    logline: 'An isolated, authorized cybersecurity lab for network reconnaissance, service identification, web security review, and evidence-based documentation.',
+    logline:
+      'An isolated, authorized cybersecurity lab for network reconnaissance, service identification, web security review, and evidence-based documentation.',
     stack: ['Kali Linux', 'Nmap', 'Metasploitable2', 'DVWA', 'GitHub'],
     build: [
       'Performed network discovery and service assessment in a controlled lab environment.',
@@ -112,8 +126,14 @@ export const projects: Project[] = [
       { value: 'Blue Team', label: 'security monitoring learning' },
       { value: 'Isolated Lab', label: 'authorized testing environment' },
     ],
-    github: 'https://github.com/2300030561/Network-Penetration-Testing-Lab',
-    palette: { from: '#071b16', via: '#075e54', to: '#050b10', accent: '#42e8b4' },
+    github:
+      'https://github.com/2300030561/Network-Penetration-Testing-Lab',
+    palette: {
+      from: '#071b16',
+      via: '#075e54',
+      to: '#050b10',
+      accent: '#42e8b4',
+    },
     motif: 'shield',
   },
   {
@@ -121,7 +141,8 @@ export const projects: Project[] = [
     title: 'SecureCorp Security Assessment',
     year: '2026',
     genre: 'Cybersecurity • Security Assessment • Blue Team',
-    logline: 'An isolated, authorized security assessment documenting network reconnaissance, service identification, HTTP security observations, and basic security-monitoring work.',
+    logline:
+      'An isolated, authorized security assessment documenting network reconnaissance, service identification, HTTP security observations, and basic security-monitoring work.',
     stack: ['Kali Linux', 'Metasploitable2', 'Nmap', 'Linux', 'GitHub'],
     build: [
       'Documented network reconnaissance and service-identification findings in an isolated lab.',
@@ -140,8 +161,14 @@ export const projects: Project[] = [
       { value: 'Assessment', label: 'documented security observations' },
       { value: 'Evidence', label: 'GitHub project documentation' },
     ],
-    github: 'https://github.com/keerthana-10088/SecureCorp-Security-Assessment',
-    palette: { from: '#08172b', via: '#075985', to: '#050b10', accent: '#38bdf8' },
+    github:
+      'https://github.com/keerthana-10088/SecureCorp-Security-Assessment',
+    palette: {
+      from: '#08172b',
+      via: '#075985',
+      to: '#050b10',
+      accent: '#38bdf8',
+    },
     motif: 'shield',
   },
   {
@@ -149,7 +176,8 @@ export const projects: Project[] = [
     title: 'Password Security Analyzer',
     year: '2026',
     genre: 'Python • Security • Programming',
-    logline: 'A password security project focused on evaluating password strength and communicating useful security feedback.',
+    logline:
+      'A password security project focused on evaluating password strength and communicating useful security feedback.',
     stack: ['Python', 'Cybersecurity', 'Git', 'GitHub'],
     build: [
       'Developed a password-focused security project to explore password strength evaluation.',
@@ -165,8 +193,14 @@ export const projects: Project[] = [
       { value: 'Python', label: 'implementation language' },
       { value: 'Security', label: 'project focus' },
     ],
-    github: 'https://github.com/2300030561/password-security-analyzer',
-    palette: { from: '#17102d', via: '#49318a', to: '#080710', accent: '#b99aff' },
+    github:
+      'https://github.com/2300030561/password-security-analyzer',
+    palette: {
+      from: '#17102d',
+      via: '#49318a',
+      to: '#080710',
+      accent: '#b99aff',
+    },
     motif: 'flow',
   },
 ];
@@ -185,9 +219,11 @@ export const achievements: Achievement[] = [
     id: 'network-penetration-testing-lab-project',
     title: 'Network Penetration Testing Lab',
     org: 'Academic Cybersecurity Lab',
-    detail: 'Hands-on cybersecurity lab covering network discovery, service identification, WebDAV/DVWA review, and documented evidence.',
+    detail:
+      'Hands-on cybersecurity lab covering network discovery, service identification, WebDAV/DVWA review, and documented evidence.',
     laurel: 'Cybersecurity Project',
-    link: 'https://github.com/2300030561/Network-Penetration-Testing-Lab',
+    link:
+      'https://github.com/2300030561/Network-Penetration-Testing-Lab',
   },
 ];
 
@@ -233,7 +269,12 @@ export const certifications: Certification[] = [
   },
 ];
 
-export type Skill = { name: string; mono: string; note?: string };
+export type Skill = {
+  name: string;
+  mono: string;
+  note?: string;
+};
+
 export type SkillCategory = {
   id: string;
   title: string;
@@ -305,7 +346,10 @@ export const skillEvidence: Record<string, string[]> = {
   React: ['Netflix-style portfolio project'],
   HTML: ['Netflix-style portfolio project'],
   CSS: ['Netflix-style portfolio project'],
-  'Git / GitHub': ['Network Penetration Testing Lab', 'Password Security Analyzer'],
+  'Git / GitHub': [
+    'Network Penetration Testing Lab',
+    'Password Security Analyzer',
+  ],
   DVWA: ['Network Penetration Testing Lab'],
   TryHackMe: ['Cybersecurity learning'],
 };
@@ -372,7 +416,8 @@ export const seasons: Season[] = [
       {
         code: 'S01 E01',
         title: 'The Foundation',
-        description: 'Completed Intermediate MPC at DePaul Junior College, Berhampur.',
+        description:
+          'Completed Intermediate MPC at DePaul Junior College, Berhampur.',
         tags: ['Intermediate', 'MPC'],
         runtime: '2021 - 2023',
         palette: amber,
@@ -383,12 +428,14 @@ export const seasons: Season[] = [
     number: 2,
     title: 'The Engineer',
     period: '2023 - 2027',
-    synopsis: 'Pursuing Computer Science and Engineering at KL University.',
+    synopsis:
+      'Pursuing Computer Science and Engineering at KL University.',
     episodes: [
       {
         code: 'S02 E01',
         title: 'Computer Science',
-        description: 'B.Tech in Computer Science and Engineering at KL University, Vijayawada.',
+        description:
+          'B.Tech in Computer Science and Engineering at KL University, Vijayawada.',
         tags: ['B.Tech', 'CSE', 'CGPA 7.78/10'],
         runtime: '2023 - 2027',
         palette: violet,
@@ -396,7 +443,8 @@ export const seasons: Season[] = [
       {
         code: 'S02 E02',
         title: 'The Programmer',
-        description: 'Practising Python, Java, C, SQL and web development through learning and projects.',
+        description:
+          'Practising Python, Java, C, SQL and web development through learning and projects.',
         tags: ['Python', 'Java', 'C', 'SQL'],
         runtime: 'Ongoing',
         palette: ocean,
@@ -407,12 +455,14 @@ export const seasons: Season[] = [
     number: 3,
     title: 'Into Cybersecurity',
     period: '2026',
-    synopsis: 'Hands-on network and web security review in an isolated lab environment.',
+    synopsis:
+      'Hands-on network and web security review in an isolated lab environment.',
     episodes: [
       {
         code: 'S03 E01',
         title: 'Network Discovery',
-        description: 'Practised network discovery and service identification as part of the Network Penetration Testing Lab project.',
+        description:
+          'Practised network discovery and service identification as part of the Network Penetration Testing Lab project.',
         tags: ['Linux', 'Nmap', 'Networking'],
         runtime: 'Network Penetration Testing Lab',
         palette: jade,
@@ -420,7 +470,8 @@ export const seasons: Season[] = [
       {
         code: 'S03 E02',
         title: 'Web Security Testing',
-        description: 'Reviewed DVWA and WebDAV behavior in a lab environment and documented security observations.',
+        description:
+          'Reviewed DVWA and WebDAV behavior in a lab environment and documented security observations.',
         tags: ['DVWA', 'SQL Injection', 'XSS'],
         runtime: 'Network Penetration Testing Lab',
         palette: crimson,
@@ -428,7 +479,8 @@ export const seasons: Season[] = [
       {
         code: 'S03 E03',
         title: 'Documenting the Findings',
-        description: 'Organised assessment evidence and project documentation in GitHub.',
+        description:
+          'Organised assessment evidence and project documentation in GitHub.',
         tags: ['Security Assessment', 'Documentation', 'GitHub'],
         runtime: 'Project evidence',
         palette: amber,
@@ -439,12 +491,14 @@ export const seasons: Season[] = [
     number: 4,
     title: 'Building Projects',
     period: '2026',
-    synopsis: 'Applying programming and development skills to practical projects.',
+    synopsis:
+      'Applying programming and development skills to practical projects.',
     episodes: [
       {
         code: 'S04 E01',
         title: 'Password Security Analyzer',
-        description: 'A Python project focused on analysing password security.',
+        description:
+          'A Python project focused on analysing password security.',
         tags: ['Python', 'Cybersecurity'],
         runtime: 'Personal project',
         palette: violet,
@@ -452,7 +506,8 @@ export const seasons: Season[] = [
       {
         code: 'S04 E02',
         title: 'Portfolio: The Series',
-        description: 'Customising a cinematic portfolio to showcase cybersecurity, programming and web development work.',
+        description:
+          'Customising a cinematic portfolio to showcase cybersecurity, programming and web development work.',
         tags: ['React', 'TypeScript', 'CSS'],
         runtime: 'Personal project',
         palette: ocean,
@@ -463,12 +518,14 @@ export const seasons: Season[] = [
     number: 5,
     title: "What's Next",
     period: 'Now learning',
-    synopsis: 'Continuing to build practical skills across cybersecurity and software development.',
+    synopsis:
+      'Continuing to build practical skills across cybersecurity and software development.',
     episodes: [
       {
         code: 'S05 E01',
         title: 'The Next Chapter',
-        description: 'Developing skills in SOC analysis, log analysis, Linux, programming and web application security.',
+        description:
+          'Developing skills in SOC analysis, log analysis, Linux, programming and web application security.',
         tags: ['SOC Analysis', 'Linux', 'Programming'],
         runtime: 'Ongoing',
         palette: jade,
@@ -565,7 +622,10 @@ export const introSlides: IntroSlide[] = [
   {
     kicker: 'Programming',
     title: 'Code. Learn. Build.',
-    lines: ['Python, Java, C and SQL', 'HTML, CSS, React and Node.js'],
+    lines: [
+      'Python, Java, C and SQL',
+      'HTML, CSS, React and Node.js',
+    ],
     chips: ['Python', 'Java', 'C', 'React', 'SQL'],
   },
   {
@@ -628,28 +688,60 @@ export const viewerProfiles: {
     name: 'Saketh',
     blurb: 'The full series, in order',
     color: '#e5132b',
-    order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
+    order: [
+      'about',
+      'journey',
+      'originals',
+      'picks',
+      'skills',
+      'moments',
+      'story',
+    ],
   },
   {
     id: 'recruiter',
     name: 'Recruiter',
     blurb: 'Resume, achievements & skills first',
     color: '#4cc9ff',
-    order: ['story', 'moments', 'skills', 'originals', 'about', 'journey', 'picks'],
+    order: [
+      'story',
+      'moments',
+      'skills',
+      'originals',
+      'about',
+      'journey',
+      'picks',
+    ],
   },
   {
     id: 'developer',
     name: 'Developer',
     blurb: 'Projects, stack & GitHub first',
     color: '#46e3a8',
-    order: ['originals', 'skills', 'journey', 'moments', 'about', 'picks', 'story'],
+    order: [
+      'originals',
+      'skills',
+      'journey',
+      'moments',
+      'about',
+      'picks',
+      'story',
+    ],
   },
   {
     id: 'creative',
     name: 'Creative',
     blurb: 'The story arc & highlights first',
     color: '#ffb547',
-    order: ['journey', 'picks', 'originals', 'moments', 'about', 'skills', 'story'],
+    order: [
+      'journey',
+      'picks',
+      'originals',
+      'moments',
+      'about',
+      'skills',
+      'story',
+    ],
   },
 ];
 
@@ -666,7 +758,10 @@ export const sectionMeta: Record<
   journey: {
     nav: 'Journey',
     card: 'My Journey',
-    meta: `${seasons.length} Seasons • ${seasons.reduce((n, s) => n + s.episodes.length, 0)} Episodes`,
+    meta: `${seasons.length} Seasons • ${seasons.reduce(
+      (n, s) => n + s.episodes.length,
+      0,
+    )} Episodes`,
     palette: amber,
   },
   originals: {
